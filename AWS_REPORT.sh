@@ -4,11 +4,11 @@
 # date : 3 june 2023
 # version : v1
 # This script will report aws resource usage
-###########################
+############################
 
 #list s3 buckets
 echo "print list of s3 buckets"
-aws s3 ls
+aws s3 ls 
 
 #list ec2 instances
 echo "print list of ec2 instances"
