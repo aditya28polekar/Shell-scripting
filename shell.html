@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Shell Scripting Learning</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.5;
+            margin: 20px;
+            background-color: #222;
+            color: #eee;
+        }
+
+        h1 {
+            color: #fff;
+        }
+
+        h2 {
+            color: #ccc;
+        }
+
+        p {
+            color: #ddd;
+        }
+
+        code {
+            background-color: #333;            
+            padding: 2px 5px;
+            border-radius: 3px;
+            color: #eee;            
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Shell Scripting Learning (Part 1)</h1>
+
+    <h2>1. How to create a file?</h2>
+    <p>To create a file in Linux, you can use the <code>touch</code> command. Here's an example:</p>
+    <pre><code>touch filename.txt</code></pre>
+
+    <h2>2. Difference between ksh, bash, and echo command in Linux</h2>
+    <p><strong>ksh</strong>: Refers to the KornShell, which is a Unix shell that is backward-compatible with the Bourne
+        shell (sh).</p>
+    <p><strong>bash</strong>: Refers to the Bourne-Again Shell, the most common shell used in Linux, offering advanced
+        features and improved scripting capabilities.</p>
+    <p><strong>echo</strong>: A command used to display text or variables on the terminal.</p>
+
+    <h2>3. How to list files and folders?</h2>
+    <p>To list files and folders in Linux, you can use the <code>ls</code> command. Here are some examples:</p>
+    <pre><code># List files and folders in the current directory
+ls
+
+# List files and folders with detailed information
+ls -l
+
+# List all files and folders, including hidden ones
+ls -a
+
+# List files and folders sorted by modification time
+ls -lt</code></pre>
+
+    <h2>4. <code>man</code> command in Linux</h2>
+    <p>The <code>man</code> command is used to display the manual pages for various commands and system functions in
+        Linux. It provides detailed information, usage examples, and command options. Here's an example:</p>
+    <pre><code>man ls</code></pre>
+
+    <h2>5. How to write a file in Linux using <code>vi/vim</code></h2>
+    <p>To write a file in Linux using the <code>vi</code> or <code>vim</code> text editor, follow these steps:</p>
+    <pre><code># Open the file in the vi editor
+vi filename.txt
+
+# Press 'i' to enter insert mode and start writing
+This is some text.
+
+# Press 'Esc' to exit insert mode
+# Type ':wq' to save and exit the file
+:wq</code></pre>
+
+    <h2>6. Difference between <code>touch</code> and <code>vim</code></h2>
+    <p><code>touch</code> is used to update the access and modification timestamps of a file or create an empty file if
+        it doesn't exist. <code>vim</code> is a powerful text editor that allows you to create, edit, and modify files.
+    </p>
+
+    <h2>7. How to copy content in Linux?</h2>
+    <p>To copy content in Linux, you can use the <code>cp</code> command. Here's an example:</p>
+    <pre><code># Copy a file
+cp source_file.txt destination_file.txt
+
+# Copy a directory and its contents recursively
+cp -r source_directory/ destination_directory/</code></pre>
+
+    <h2>8. Purpose of <code>#!/bin/bash</code> or <code>#!/bin/sh</code> in a script</h2>
+    <p>The <code>#!/bin/bash</code> or <code>#!/bin/sh</code> line, also known as a shebang, specifies the interpreter
+        (shell) that should be used to execute the script. In this case, <code>/bin/bash</code> or <code>/bin/sh</code>
+        is the path to the Bash or Bourne shell executable, respectively.</p>
+
+    <h2>9. How to use the <code>insert</code> command in Linux?</h2>
+    <p>The <code>insert</code> command is not a standard Linux command. If you meant the insert mode in text editors
+        like <code>vi</code> or <code>vim</code>, you can enter insert mode by pressing the 'i' key. In insert mode, you
+        can type and edit text. Press 'Esc' to exit insert mode.</p>
+
+    <h2>10. How to execute a Shell Script?</h2>
+    <p>To execute a shell script in Linux, follow these steps:</p>
+    <pre><code># Make the script executable (if it's not already)
+chmod +x script.sh
+
+# Run the script
+./script.sh</code></pre>
+
+    <h2>11. How to grant permissions in Linux? <code>chmod</code> command and how to use it?</h2>
+    <p>The <code>chmod</code> command is used to change permissions (read, write, execute) of files and directories in
+        Linux. Here's an example:</p>
+    <pre><code># Grant read, write, and execute permissions to the owner
+chmod u+rwx filename.txt
+
+# Grant read and execute permissions to the group
+chmod g+rx filename.txt
+
+# Grant read permissions to others
+chmod o+r filename.txt</code></pre>
+
+    <h2>12. How to check the history of commands?</h2>
+    <p>To check the history of commands executed in a shell session, you can use the <code>history</code> command.
+        Here's an example:</p>
+    <pre><code>history</code></pre>
+
+    <h2>13. How to create folders?</h2>
+    <p>To create folders (directories) in Linux, you can use the <code>mkdir</code> command. Here's an example:</p>
+    <pre><code>mkdir foldername</code></pre>
+
+    <h2>14. How to change the directory in Linux?</h2>
+    <p>To change the current working directory in Linux, you can use the <code>cd</code> command. Here's an example:</p>
+    <pre><code>cd /path/to/directory</code></pre>
+
+    <h2>15. How to write a simple shell script?</h2>
+    <p>To write a simple shell script, create a new file with a <code>.sh</code> extension and add your commands to it.
+        Here's an example:</p>
+    <pre><code>#!/bin/bash
+
+# This is a simple shell script
+echo "Hello, World!"</code></pre>
+
+    <h2>16. What is the purpose of Shell Scripting in DevOps?</h2>
+    <p>Shell scripting plays a vital role in DevOps by automating repetitive tasks, facilitating system administration,
+        and enabling the deployment and management of applications. It allows for the orchestration of various DevOps
+        processes, such as provisioning infrastructure, configuring environments, deploying applications, and managing
+        system resources.</p>
+
+    <h2>17. How to check CPU and RAM of a Linux Machine?</h2>
+    <p>To check CPU and RAM information in Linux, you can use various commands:</p>
+    <ul>
+        <li><code>top</code>: Provides real-time information about CPU usage, memory usage, and other system statistics.
+        </li>
+        <li><code>htop</code>: Similar to <code>top</code>, but with an interactive and user-friendly interface.</li>
+        <li><code>free</code>: Displays information about memory usage and available memory.</li>
+        <li><code>cat /proc/cpuinfo</code>: Shows detailed information about the CPU(s) in the system.</li>
+    </ul>
+
+    <h2>18. What is the "top" command and why is it used?</h2>
+    <p>The <code>top</code> command is used to monitor system resources in real-time, providing a dynamic view of
+        processes, CPU usage, memory usage, and other system statistics. It is commonly used for performance monitoring,
+        troubleshooting, and identifying resource-intensive processes.</p>
+
+    <h2>19. Conclusion</h2>
+    <p>Shell scripting is a powerful tool for automating tasks, managing systems, and enabling DevOps practices. It
+        allows you to create scripts to perform repetitive tasks, manipulate files and directories, manage permissions,
+        and interact with system resources. Learning shell scripting can greatly enhance your efficiency and
+        productivity as a Linux user or a DevOps practitioner.</p>
+</body>
+
+</html>
